@@ -28,7 +28,9 @@
     "start": "electron ./dist/main.js",
     "build:main": "tsc",
     "build:render": "webpack --config webpack.dev.js",
-    "publish:windows": "tsc && webpack --config webpack.prod.js && electron-builder --win --x64"
+    "publish:windows": "tsc && webpack --config webpack.prod.js && electron-builder --win --x64",
+    "preinstall": "typesync || :",
+    "postinstall": "typesync && yarn install --ignore-scripts"
   },
   "resolutions": {
     "styled-components": "5.0.0"
