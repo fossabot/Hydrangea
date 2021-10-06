@@ -40,7 +40,7 @@ export const TitleBar = () => {
         }
         <Button onClick={minimizeHandler} aria-label={"最小化"}>
           <svg aria-hidden={false} width={12} height={12} viewBox={"0 0 12 1"}>
-            <rect fill="none" stroke="white" width="12" height="0.5" fillRule="evenodd" />
+            <rect fill="none" stroke="white" width="12" height="0.01" fillRule="evenodd" />
           </svg>
         </Button>
       </Container>
@@ -62,7 +62,7 @@ const Button = styled.div`
   width: 30px;
   height: 20px;
   float: right;
-  background-color: #2F3136;
+  background-color: ${(t): string => t.theme.FOREGROUND};
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -78,7 +78,7 @@ const ExitButton = styled.div`
   top: -4px;
   width: 30px;
   height: 20px;
-  background-color: #2F3136;
+  background-color: ${(t): string => t.theme.FOREGROUND};
   cursor: pointer;
   display: flex;
   align-items: center;
