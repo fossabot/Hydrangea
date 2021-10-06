@@ -1,6 +1,6 @@
 ## Hydrangea - General Manager(Launcher) for Modded Minecraft
 
-###Setup
+### Setup
 
 ```shell
 # Package Install
