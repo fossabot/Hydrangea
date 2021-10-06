@@ -1,0 +1,71 @@
+{
+  "name": "hydrangea",
+  "version": "0.0.0-bleeding-edge",
+  "description": "General Manager(Launcher) for Modded Minecraft",
+  "main": "./dist/main.js",
+  "repository": "https://github.com/ReiRokusanami0010/Hydrangea.git",
+  "author": "ReiRokusanami <reirokusanami.rdh@gmail.com>",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "homepage": ".",
+  "build": {
+    "productName": "Nekomata",
+    "files": [
+      "./dist/**/*",
+      "./dist/**/*.js",
+      "./dist/**/*.css",
+      "./dist/**/*.html",
+      "./dist/main.js",
+      "./dist/bundle.js",
+      "./dist/index.html"
+    ],
+    "appId": "dev.nekomata.reiva",
+    "directories": {
+      "output": "./prod"
+    }
+  },
+  "scripts": {
+    "start": "electron ./dist/main.js",
+    "build:main": "tsc",
+    "build:render": "webpack --config webpack.dev.js",
+    "publish:windows": "tsc && webpack --config webpack.prod.js && electron-builder --win --x64"
+  },
+  "resolutions": {
+    "styled-components": "5.0.0"
+  },
+  "dependencies": {
+    "@types/moment": "^2.13.0",
+    "@types/webpack-env": "^1.16.2",
+    "csp-html-webpack-plugin": "^5.1.0",
+    "css-loader": "^5.2.7",
+    "deox": "^3.3.1",
+    "get-nonce": "^1.0.1",
+    "mini-css-extract-plugin": "^2.3.0",
+    "moment": "^2.29.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-is": "^17.0.2",
+    "react-redux": "^7.2.5",
+    "redux": "^4.1.1",
+    "reset-css": "^5.0.1",
+    "rxjs": "6.0.0-beta.0",
+    "styled-components": "^5.3.1",
+    "tslib": "^1.9.0",
+    "webpack-env": "^0.8.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.27",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-redux": "^7.1.18",
+    "@types/styled-components": "^5.1.14",
+    "@reduxjs/toolkit": "^1.6.2",
+    "electron": "^15.1.1",
+    "html-webpack-plugin": "^5.3.2",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.3",
+    "typescript-plugin-styled-components": "^2.0.0",
+    "webpack": "^5.56.1",
+    "webpack-cli": "^4.8.0"
+  }
+}
