@@ -9,7 +9,7 @@
   "private": true,
   "homepage": ".",
   "build": {
-    "productName": "Nekomata",
+    "productName": "Hydrangea",
     "files": [
       "./dist/**/*",
       "./dist/**/*.js",
